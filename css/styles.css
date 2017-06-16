@@ -1,0 +1,15 @@
+#employees img {float: left; margin: 10px; display: inline;}
+#employees aside {float: right;}
+#employees section {display: inline-block;}
+
+#manager img {float: left; margin: 10px; display: inline;}
+#manager aside {float: right;}
+#manager section {display: inline-block;}
+
+#reports img {float: left; margin: 10px; display: inline;}
+#reports aside {float: right;}
+#reports section {display: inline-block;}
+
+.cnt-bubble {
+    border: 1px solid; border-radius: 25px;"
+}

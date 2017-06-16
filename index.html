@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vecta Corp Directory</title>
+<!--Styles-->
+
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!--Scripts-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<script src="js/directory.js"></script>
+<script src="js/manager.js"></script>
+<script src="js/employee.js"></script>
+<script src="js/reportsto.js"></script>
+
+
+</head>
+<body>
+
+<!--   Search Page-->
+   <div data-role="page" id="search">
+      <header data-role="header"><h1>Directory</h1></header>
+      <section data-position="fixed">
+          <form class="ui-filterable">
+            <input id="autocomplete-input" data-type="search" placeholder="Enter Employee Name">
+          </form>          
+      </section>
+      <section>
+        
+          <h2>Welcome to the Veta Corp Directory!</h2>
+          <p>Please enter the name of the employee you are looking for.</p>
+          
+          <ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-input="#autocomplete-input"></ul>
+
+      </section>
+      
+       
+   </div>
+   
+<!--   Employee Page-->
+   <div data-role="page" id="employeePage">
+     <header data-role="header">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left">Back</a>
+        <h1>Employee Details</h1>
+        <a href="#search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">Search</a>
+     </header>
+        <section id="employees">
+            <section>
+                <img src="">
+                <aside>
+                    <h2></h2>
+                    <h3></h3>
+                </aside>
+            </section>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#managerPage"></a></li>
+                <li><a href="#reportsPage"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                
+            </ul>
+        </section>
+       
+   </div>
+   
+<!--   Manager Page-->
+   <div data-role="page" id="managerPage">
+     <header data-role="header">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left">Back</a>
+        <h1>Manager</h1>
+        <a href="#search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">Search</a>
+     </header>
+      <section id="manager">
+          <section>
+                <img src="">
+                <aside>
+                    <h2></h2>
+                    <h3></h3>
+                </aside>
+            </section>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#"></a></li>
+                <li><a href="#reportsPage"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                
+            </ul>
+        </section>
+      </section>
+       
+   </div>
+<!--   Report To Page-->
+   <div data-role="page" id="reportsPage">
+    <header data-role="header">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left">Back</a>
+        <h1>Direct Reports</h1>
+        <a href="#search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">Search</a>
+     </header>
+     <section id="reports">
+        <ul data-role="listview" data-inset="true"></ul>
+         
+     </section>
+     
+   </div>
+    
+</body>
+</html>
