@@ -5,7 +5,7 @@ $(function () {
     var empInfoList, mangrInfoList, employee, manager, boss, mangrImage;
     function GetEmployee(empid) {
         mangrInfoList = $("#manager ul li a");
-        $.getJSON("../json.js", function (data) {
+        $.getJSON("json.js", function (data) {
             $.each(data, function () {
                 $.each(this, function (key, value) {
                     if (empid === value.id) {
@@ -30,36 +30,13 @@ $(function () {
             });
         });
     }
-//    function GetSubs(id) {
-//        var search, countBubble, intSubs = 0;
-//        if (id.length === 4) {
-//            $.getJSON("../json.js", function (data) {
-//                $.each(data, function () {
-//                    $.each(this, function (key, value) {
-//                        search = value.reportsTo;
-//                        if (id === search) {
-//                            intSubs++;
-//                            (sessionStorage.intSubs) ? sessionStorage.("intSubs") = 0 : sessionStorage.intSubs = intSubs;
-//                        }
-//                    });
-//                });
-//            });
-//            
-//            countBubble = "<span class='ui-li-count cnt-bubble'>" + sessionStorage.intSubs + "</span>";
-//        } else {
-//
-//            countBubble = "<span class='ui-li-count cnt-bubble'>" + intSubs + "</span>";
-//        }
-//        
-//        return countBubble;
-//        
-//    }
+  
 
     
     empInfoList = $("#employees ul li a");
     $("#autocomplete").click(function (event) {
         var empImage, empID = event.target.attributes[0].value, bubble;
-        $.getJSON("../json.js", function (data) {
+        $.getJSON("json.js", function (data) {
             $.each(data, function () {
                 $.each(this, function (key, value) {
                     if (empID === value.id) {

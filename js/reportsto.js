@@ -5,7 +5,7 @@ $(function () {
     var empInfoList, mangrInfoList, employee, manager, boss, mangrImage;
     function GetEmployee(empid) {
         mangrInfoList = $("#manager ul li a");
-        $.getJSON("../json.js", function (data) {
+        $.getJSON("json.js", function (data) {
             $.each(data, function () {
                 $.each(this, function (key, value) {
                     if (empid === value.id) {
@@ -36,7 +36,7 @@ $(function () {
     empInfoList = $("#employees ul li a");
     $("#reports ul").click(function (event) {
         var empImage, empID = event.target.getAttribute("alt");
-        $.getJSON("../json.js", function (data) {
+        $.getJSON("json.js", function (data) {
             $.each(data, function () {
                 $.each(this, function (key, value) {
                     if (empID === value.id) {
@@ -61,28 +61,6 @@ $(function () {
         });
     });
 
-//    
-//    function GetSubs(id) {
-//        var search, intRTo = 0, countBubble;
-//        if (id.length === 4) {
-//            $.getJSON("../json.js", function (data) {
-//                $.each(data, function () {
-//                    $.each(this, function (key, value) {
-//                        search = value.reportsTo;
-//                        if (id === search) {
-//                            intRTo += 1;
-//                        }
-//                    });
-//                });
-//            });
-//            countBubble = "<span class='ui-li-count cnt-bubble'>" + intRTo + "</span>";
-//            
-//        } else {
-//            intRTo = 0;
-//            countBubble = "<span class='ui-li-count cnt-bubble'>" + intRTo + "</span>";
-//        }
-//        return countBubble;
-//    }
 
 
     $("#employees ul li:nth-child(2) a, #manager ul li:nth-child(2) a").click(function (event) {
@@ -91,7 +69,7 @@ $(function () {
             event.preventDefault();
         } else {
             $("#reports ul").html(" ");
-            $.getJSON("../json.js", function (data) {
+            $.getJSON("json.js", function (data) {
                 $.each(data, function () {
                     $.each(this, function (key, value) {
                         rTo = value.reportsTo;

@@ -7,7 +7,7 @@ $(function () {
     $("#manager ul li:first-child a").click(function (event) {
         var mangrInfoList, mangrImage, i, dr;
         mangrInfoList = $("#manager ul li a");
-        $.getJSON("../json.js", function (data) {
+        $.getJSON("json.js", function (data) {
             $.each(data, function () {
                 $.each(this, function (key, value) {
                     if ("1001"  === value.id) {
